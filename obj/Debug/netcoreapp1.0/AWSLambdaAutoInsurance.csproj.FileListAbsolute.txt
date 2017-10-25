@@ -1,0 +1,8 @@
+C:\Users\amanny\Source\Repos\AWSLambdaAutoInsurance\AWSLambdaAutoInsurance\bin\Debug\netcoreapp1.0\AWSLambdaAutoInsurance.deps.json
+C:\Users\amanny\Source\Repos\AWSLambdaAutoInsurance\AWSLambdaAutoInsurance\bin\Debug\netcoreapp1.0\AWSLambdaAutoInsurance.dll
+C:\Users\amanny\Source\Repos\AWSLambdaAutoInsurance\AWSLambdaAutoInsurance\bin\Debug\netcoreapp1.0\AWSLambdaAutoInsurance.pdb
+C:\Users\amanny\Source\Repos\AWSLambdaAutoInsurance\AWSLambdaAutoInsurance\obj\Debug\netcoreapp1.0\AWSLambdaAutoInsurance.csproj.CoreCompileInputs.cache
+C:\Users\amanny\Source\Repos\AWSLambdaAutoInsurance\AWSLambdaAutoInsurance\obj\Debug\netcoreapp1.0\AWSLambdaAutoInsurance.AssemblyInfoInputs.cache
+C:\Users\amanny\Source\Repos\AWSLambdaAutoInsurance\AWSLambdaAutoInsurance\obj\Debug\netcoreapp1.0\AWSLambdaAutoInsurance.AssemblyInfo.cs
+C:\Users\amanny\Source\Repos\AWSLambdaAutoInsurance\AWSLambdaAutoInsurance\obj\Debug\netcoreapp1.0\AWSLambdaAutoInsurance.dll
+C:\Users\amanny\Source\Repos\AWSLambdaAutoInsurance\AWSLambdaAutoInsurance\obj\Debug\netcoreapp1.0\AWSLambdaAutoInsurance.pdb
