@@ -8,6 +8,7 @@ using Alexa.NET.Request.Type;
 using Alexa.NET.Response;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.Serialization;
+using AWSLambdaAutoInsurance.Model;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
@@ -38,10 +39,28 @@ namespace AWSLambdaAutoInsurance
             if (requestType == typeof(IntentRequest))
             {
                 var intentRequest = input.Request as IntentRequest;
-                var countryRequested = intentRequest.Intent.Slots["State"].Value;
+                var stateRequested = intentRequest.Intent.Slots["State"].Value;
 
+                if (stateRequested == null)
+                {
+                    context.Logger.LogLine($"The state was not understood.");
+                    return MakeSkillResponse("I'm sorry, but I didn't understand the state you were asking for. Please ask again.", false);
+                }
+
+                Rater rate = new Rater();
+
+                var avgRate = rate.GetAverageRateForState(stateRequested);
+
+                if(avgRate.Count == 0)
+                {
+                    return MakeSkillResponse(
+                       $"No data found for {stateRequested}",
+                       true);
+                }
+
+                var outputText = $"For {stateRequested} state, the carrier with lowest average premium is {avgRate.First().Key} and average rate is {avgRate.First().Value.Substring(0,5)} dollars. The average rates are based on quotes made for last 3 months";
                 return MakeSkillResponse(
-                        $"Hello Ashwini! This is the first response from your Alexa skill using c sharp.",
+                        outputText,
                         true);
             }
             else
